@@ -55,3 +55,8 @@ var::input-required "Please input the directory that you want to move to" CROSSP
 ```shell
 mv kubectl-crossplane $CROSSPLANE_CLI_PATH
 ```
+
+To verify the installation:
+```shell
+kubectl crossplane
+```
