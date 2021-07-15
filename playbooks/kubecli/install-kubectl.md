@@ -1,4 +1,4 @@
-# Install kubectl and its utils
+# Install kubectl and Its Utils
 
 This playbook will walk you through the steps to install and set up kubectl along with other convenience command line tools on Linux OS.
 
@@ -36,7 +36,7 @@ To verify the installation:
 kubectl version --client
 ```
 
-## Install other utils
+## Install Other Utils
 
 ### kubealias
 
