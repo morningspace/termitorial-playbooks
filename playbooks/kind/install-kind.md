@@ -1,4 +1,4 @@
-# Install Kind
+# Install kind
 
 This playbook will walk you through the steps to install [kind](https://kind.sigs.k8s.io/) on Linux OS.
 
@@ -29,7 +29,7 @@ chmod +x ./kind
 mv ./kind $KIND_PATH/kind
 ```
 
-To verify:
+To verify the installation:
 ```shell
 kind version
 ```
