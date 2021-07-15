@@ -6,11 +6,3 @@ nodes:
   extraPortMappings:
   - containerPort: 5601
     hostPort: 5601
-- role: worker
-  extraPortMappings:
-  - containerPort: 5601
-    hostPort: 5601
-- role: worker
-  extraPortMappings:
-  - containerPort: 5601
-    hostPort: 5601
