@@ -1,4 +1,4 @@
-# Install and Set Up kubectl
+# Install kubectl and its utils
 
 This playbook will walk you through the steps to install and set up kubectl along with other convenience command line tools on Linux OS.
 
@@ -31,7 +31,7 @@ chmod +x ./kubectl
 mv ./kubectl $KUBECTL_PATH/kubectl
 ```
 
-To verify:
+To verify the installation:
 ```shell
 kubectl version --client
 ```
@@ -50,8 +50,6 @@ Then make sure which shell you use, e.g. bash or zsh, and put the corresponding 
 SHELLRC_FILE=.bashrc
 var::input-required "Please input the rc file of your shell" SHELLRC_FILE
 -->
-
-
 Then edit your shell rc file to add below line:
 ```shell
 (cat ~/$SHELLRC_FILE | grep -q "[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases") || echo "[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases" > ~/$SHELLRC_FILE
