@@ -1,0 +1,16 @@
+# three node (two workers) cluster config
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+  extraPortMappings:
+  - containerPort: 5601
+    hostPort: 5601
+- role: worker
+  extraPortMappings:
+  - containerPort: 5601
+    hostPort: 5601
+- role: worker
+  extraPortMappings:
+  - containerPort: 5601
+    hostPort: 5601
