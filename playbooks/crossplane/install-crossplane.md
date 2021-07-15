@@ -43,7 +43,7 @@ kubectl get all -n crossplane-system
 
 The Crossplane CLI extends kubectl with functionality to build, push, and install Crossplane packages:
 ```shell
-curl -sL https://raw.githubusercontent.com/crossplane/crossplane/master/install.sh | sh
+curl -L https://raw.githubusercontent.com/crossplane/crossplane/master/install.sh | sh
 ```
 
 This will download the Crossplane CLI to your local machine, choose a directory appeared in $PATH, e.g. `/usr/local/bin`, and move it there:
@@ -52,6 +52,6 @@ echo PATH=$PATH
 CROSSPLANE_CLI_PATH=/usr/local/bin
 var::input-required "Please input the directory that you want to move to" CROSSPLANE_CLI_PATH
 -->
-```
+```shell
 mv kubectl-crossplane $CROSSPLANE_CLI_PATH
 ```
