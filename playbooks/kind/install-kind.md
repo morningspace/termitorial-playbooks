@@ -1,8 +1,6 @@
-# Launch Kind
+# Install Kind
 
-This playbook will walk you through the steps to install [kind](https://kind.sigs.k8s.io/) on Linux OS then launch a cluster.
-
-## Install Kind
+This playbook will walk you through the steps to install [kind](https://kind.sigs.k8s.io/) on Linux OS.
 
 Firstly, make sure kind hasn't been installed on your machine.
 <!--shell
@@ -20,7 +18,7 @@ Then, download it to your local machine:
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/$KIND_VERSION/kind-linux-amd64
 ```
 
-Make it executable, then choose a directory appeared in $PATH, e.g. `/usr/local/bin`, and move it there:
+After download, make it executable, then choose a directory appeared in $PATH, e.g. `/usr/local/bin`, and move it there:
 <!--shell
 echo PATH=$PATH
 KIND_PATH=/usr/local/bin
@@ -34,16 +32,4 @@ mv ./kind $KIND_PATH/kind
 To verify:
 ```shell
 kind version
-```
-
-## Launch Kind
-
-To launch a kind cluster is easy. When launch, you can specify a configuration file as needed. Here is an example:
-```shell
-cat kind-config.yaml
-```
-
-To laucn a kind cluster using the above configuraiton file:
-```shell
-kind create cluster --config kind-config.yaml
 ```
