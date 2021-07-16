@@ -32,7 +32,7 @@ function wait-app {
   local app_name=$2
   local app_labels=("${@:3}")
   local num_tries=500
-  target::step "Waiting for $app_name to be up"
+  log::info "Waiting for $app_name to be up"
   while ! is-app-ready-by-labels $namespace ${app_labels[@]}; do
     if ((--num_tries == 0)); then
       echo "error bringing up $app_name" >&2
