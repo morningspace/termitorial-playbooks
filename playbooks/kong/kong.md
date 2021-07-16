@@ -21,7 +21,7 @@ kubectl get csv -n operators
 ## Deploy Kong instance
 
 To deploy a sample Kong instance using operator, create a custom resource as below:
-```shell
+```
 cat <<EOF | kubectl apply -f -
 apiVersion: charts.helm.k8s.io/v1alpha1
 kind: Kong
@@ -44,6 +44,29 @@ spec:
     installCRDs: false
 EOF
 ```
+<!--shell
+cat <<EOF | kubectl apply -f -
+apiVersion: charts.helm.k8s.io/v1alpha1
+kind: Kong
+metadata:
+  name: example-kong
+spec:
+  proxy:
+    type: NodePort
+  env:
+    prefix: /kong_prefix/
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  ingressController:
+    enabled: true
+    installCRDs: false
+EOF
+-->
 
 To test the deployment, get the cluster IP of the Kong proxy service:
 ```shell

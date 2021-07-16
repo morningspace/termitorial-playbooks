@@ -1,11 +1,3 @@
-function test-olm {
-  kubectl get deployment olm-operator -n openshift-operator-lifecycle-manager -o=jsonpath='{.spec}' > /dev/null 2>&1
-  if [[ $? -eq 0 ]]; then
-    log::info "OLM has already been installed on your system."
-    return 1
-  fi
-}
-
 function is-app-ready {
   local out
   if ! out="$(kubectl get pod -n $1 -l "$2" -o jsonpath='{ .items[*].status.conditions[?(@.type == "Ready")].status }' 2>/dev/null)"; then
